@@ -5,9 +5,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static constants.Urls.PASSWORD;
+import static constants.Urls.USERNAME;
+
 public class SauceDemoTestXpath extends BaseTest {
-    private final static String USERNAME = "standard_user";
-    private final static String PASSWORD = "secret_sauce";
 
     @Test
          public void sauceDemoMainFlowTest(){
