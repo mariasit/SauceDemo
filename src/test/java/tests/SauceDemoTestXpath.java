@@ -5,9 +5,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static constants.Urls.PASSWORD;
+import static constants.Urls.USERNAME;
+
 public class SauceDemoTestXpath extends BaseTest {
-    private final static String USERNAME = "standard_user";
-    private final static String PASSWORD = "secret_sauce";
 
     @Test
          public void sauceDemoMainFlowTest(){
@@ -20,7 +21,7 @@ public class SauceDemoTestXpath extends BaseTest {
 
         String itemNameInStore = driver.findElement(By.xpath("(//div[@class='inventory_item_name'])[1]")).getText();
         String itemPriceInStore = driver.findElement(By.xpath("(//div[@class='inventory_item_price'])[1]")).getText();
-        driver.findElement(By.name("add-to-cart-sauce-labs-backpack")).click();
+        driver.findElement(By.xpath("(//button[@class=\"btn btn_primary btn_small btn_inventory\"])[1]")).click();
         driver.get("https://www.saucedemo.com/cart.html");
 
         try {
